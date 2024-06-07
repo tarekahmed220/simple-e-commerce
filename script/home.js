@@ -72,7 +72,7 @@ function showDetails(id) {
     if (Newreq.readyState === 4 && Newreq.status == 200) {
       var productData = JSON.parse(Newreq.response);
       console.log(productData);
-      window.open("productDetails.html", "_blank");
+      window.open("productDetails.html", "_self");
       localStorage.setItem("productDetails", JSON.stringify(productData));
     }
   });
