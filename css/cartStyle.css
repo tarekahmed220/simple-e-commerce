@@ -13,6 +13,16 @@ header {
   padding: 0 15px;
   height: 58px;
 }
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .title h2 {
+    font-size: 25px;
+  }
+}
 
 .cart a,
 #cart-count {
@@ -52,7 +62,12 @@ main h2 {
   align-items: center;
   padding: 17px;
   border-bottom: 1px solid #ddd;
-  margin-bottom: 20p;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+  }
 }
 
 .cart-item-image {
@@ -79,6 +94,11 @@ main h2 {
 
 .cart-item-quantity-buttons {
   display: flex;
+}
+@media (max-width: 768px) {
+  .cart-item-quantity-buttons {
+    margin: 15px 0;
+  }
 }
 
 .cart-item-quantity-buttons button {
