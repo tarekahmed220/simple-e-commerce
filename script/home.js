@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="imgContainer" onclick="showDetails(${reqData[i].id})">
         <img src="${reqData[i].image}" alt="${reqData[i].title}" />
       </div>
-      <div class="text" onclick="showDetails(${reqData[i].id})">
+      <div class="text">
         <h3>${reqData[i].title}</h3>
         <p>category: ${reqData[i].category}</p>
         <div class="price">$${reqData[i].price}</div>
