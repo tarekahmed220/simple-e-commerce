@@ -9,14 +9,28 @@
   <body>
     <header>
       <h1>Simple E-Commerce</h1>
+
       <div class="cart">
         <span id="cart-count">0</span> <a href="./cart.html">items in cart</a>
       </div>
     </header>
+
     <main>
+      <div class="search">
+        <input
+          type="text"
+          class="form-control"
+          id="search-input"
+          placeholder="Search products..."
+        />
+        <button type="submit" id="serchBtn" class="btn btn-primary">
+          <i class="fas fa-search"></i> Search
+        </button>
+      </div>
       <h2>Products</h2>
       <section class="products"></section>
     </main>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="./script/home.js"></script>
   </body>
 </html>

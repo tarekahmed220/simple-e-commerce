@@ -1,0 +1,28 @@
+.validContainer {
+  position: relative;
+  width: 90%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  margin: 20px auto;
+  background-color: #f2dede;
+}
+.validationmsg {
+  color: #da1815;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  text-shadow: none;
+}
+.validContainer i {
+  color: #ecd02c;
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  font-size: 23px;
+}
+.form-label {
+  display: none;
+}

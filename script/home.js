@@ -12,10 +12,28 @@ document.addEventListener("DOMContentLoaded", function () {
         data = JSON.parse(req.responseText);
 
         displayProducts(data);
+        const serchBtn = document.querySelector("#serchBtn");
+        serchBtn.addEventListener("click", function () {
+          searchedProducts(data);
+        });
+        const searchInput = document.querySelector("#search-input");
+        searchInput.addEventListener("input", function () {
+          searchedProducts(data);
+        });
       }
     });
   }
   getProducts();
+
+  function searchedProducts(reqData) {
+    const searchInput = document.querySelector("#search-input");
+
+    const searchQuery = searchInput.value.toLowerCase();
+    const filteredProduct = reqData.filter((product) => {
+      return product.title.toLowerCase().includes(searchQuery);
+    });
+    displayProducts(filteredProduct);
+  }
 
   function displayProducts(reqData) {
     var productContainer = ``;
