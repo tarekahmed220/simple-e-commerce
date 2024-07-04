@@ -64,12 +64,18 @@ main h2 {
 main {
   padding: 10px;
 }
-.cart {
+.cart,
+.activeUser {
   border: 1px solid;
   padding: 5px;
 }
 .cart a,
 #cart-count {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+.activeUser a {
   color: white;
   font-size: 18px;
   text-decoration: none;
@@ -119,10 +125,10 @@ main {
   flex-grow: 1;
   border: none;
   outline: none;
-  padding: 5px;
+  padding: 10px 5px;
   width: 70%;
   border-radius: 10px;
-  font-size: 15px;d
+  font-size: 17px;
 }
 .search button {
   flex-shrink: 0;
@@ -138,5 +144,24 @@ main {
 }
 .search button:hover {
   background: #007bff;
+  color: white;
+}
+.welcome {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.user {
+  border: solid 1px;
+  padding: 7px;
+  margin-left: 5px;
+}
+.logout {
+  padding: 7px;
+  margin-left: 3px;
+}
+.logout a {
   color: white;
 }

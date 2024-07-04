@@ -12,15 +12,15 @@ document.addEventListener("DOMContentLoaded", function () {
         data = JSON.parse(req.responseText);
 
         displayProducts(data);
-        const serchBtn = document.querySelector("#serchBtn");
-        serchBtn.addEventListener("click", function () {
-          searchedProducts(data);
-        });
-        const searchInput = document.querySelector("#search-input");
-        searchInput.addEventListener("input", function () {
-          searchedProducts(data);
-        });
+        // const serchBtn = document.querySelector("#serchBtn");
+        // serchBtn.addEventListener("click", function () {
+        //   searchedProducts(data);
+        // });
       }
+      const searchInput = document.querySelector("#search-input");
+      searchInput.addEventListener("input", function () {
+        searchedProducts(data);
+      });
     });
   }
   getProducts();
@@ -95,3 +95,34 @@ function showDetails(id) {
     }
   });
 }
+
+function checkUserLogin() {
+  var isLogin = JSON.parse(localStorage.getItem("isLogin"));
+
+  var activeUser = JSON.parse(localStorage.getItem("activeUser"));
+  if (activeUser) {
+    var userName = activeUser.username;
+  }
+
+  if (isLogin) {
+    document.querySelector(".cart").style.display = "block";
+    document.querySelector(".user").style.display = "block";
+    document.querySelector(".logout").style.display = "block";
+    document.querySelector(
+      ".welcome .user"
+    ).textContent = `Welcome, ${userName}`;
+    document.querySelector(".activeUser").style.display = "none";
+  } else {
+    document.querySelector(".cart").style.display = "none";
+    document.querySelector(".user").style.display = "none";
+    document.querySelector(".logout").style.display = "none";
+    document.querySelector(".activeUser").style.display = "block";
+  }
+}
+checkUserLogin();
+var logOut = document.querySelector(".logout a");
+logOut.addEventListener("click", function () {
+  localStorage.removeItem("isLogin");
+  localStorage.removeItem("activeUser");
+  window.location = "/login.html";
+});

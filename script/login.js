@@ -8,13 +8,13 @@ var adminPassword = "admin@123";
 
 loginBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  if (
-    email.value.trim() === "admin@iti.com" &&
-    password.value.trim() === "admin@123"
-  ) {
-    window.location = "./dashbord.html";
-    return;
-  }
+  // if (
+  //   email.value.trim() === "admin@iti.com" &&
+  //   password.value.trim() === "admin@123"
+  // ) {
+  //   window.location = "./dashbord.html";
+  //   return;
+  // }
   var fullUsersData = JSON.parse(localStorage.getItem("fullUsersData")) || [];
   var validUser = false;
 

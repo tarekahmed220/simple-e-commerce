@@ -9,9 +9,19 @@
   <body>
     <header>
       <h1>Simple E-Commerce</h1>
-
-      <div class="cart">
-        <span id="cart-count">0</span> <a href="./cart.html">items in cart</a>
+      <div class="welcome">
+        <div class="cart">
+          <span id="cart-count">0</span> <a href="./cart.html">items in cart</a>
+        </div>
+        <div class="user">
+          <span>Welcome, User</span>
+        </div>
+        <div class="logout">
+          <a href="#">Logout</a>
+        </div>
+      </div>
+      <div class="activeUser">
+        <a href="./register.html">Signin/Signup</a>
       </div>
     </header>
 
@@ -23,9 +33,9 @@
           id="search-input"
           placeholder="Search products..."
         />
-        <button type="submit" id="serchBtn" class="btn btn-primary">
+        <!-- <button type="submit" id="serchBtn" class="btn btn-primary">
           <i class="fas fa-search"></i> Search
-        </button>
+        </button> -->
       </div>
       <h2>Products</h2>
       <section class="products"></section>
