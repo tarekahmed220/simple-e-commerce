@@ -26,3 +26,39 @@
 .form-label {
   display: none;
 }
+.login,
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: 120px auto;
+  flex-wrap: wrap;
+}
+
+.login .form-container,
+.register .form-container {
+  width: 70%;
+}
+
+#img_container {
+  width: 30%;
+}
+
+#img_container img {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .login,
+  .register {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .login .form-container,
+  .register .form-container,
+  #img_container {
+    width: 100%;
+  }
+}

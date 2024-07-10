@@ -168,3 +168,15 @@ main {
 .logout a {
   color: white;
 }
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  #carouselExampleCaptions {
+    display: none;
+  }
+}
+.carousel-inner img {
+  max-width: 100%;
+}
